@@ -1,0 +1,10 @@
+#name : New File
+#key: vsl
+# --
+void setup() {
+  $0
+}
+
+void loop() {
+
+}

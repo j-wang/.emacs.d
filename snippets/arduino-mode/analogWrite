@@ -1,0 +1,4 @@
+# name: analogWrite(...)
+# key: aw
+# ==
+analogWrite(${1:pinNumber}, ${2:value})

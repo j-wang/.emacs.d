@@ -1,0 +1,4 @@
+# name: analogRead(...)
+# key: ar
+# --
+analogRead(${1:pinNumber})
