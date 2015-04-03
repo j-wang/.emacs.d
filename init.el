@@ -28,10 +28,9 @@
 ;; Flycheck everywhere
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
-;; Enable ido -- DEPRECATED, using Helm
-;; (require 'ido)
-;; (setq ido-enable-flex-matching t)
-;; (setq ido-everywhere t)
-;; (ido-mode 1)
+;; Activate CEDET
+(semantic-mode 1)
+(global-ede-mode 1)
+(global-semantic-idle-summary-mode 1)
 
 ;;; init.el ends here

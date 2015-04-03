@@ -21,6 +21,7 @@
     markdown-mode
     async
     helm
+    arduino-mode
     ) "list of packages to ensure are installed at launch")
 
 ;; Check if packages are installed

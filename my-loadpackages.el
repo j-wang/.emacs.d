@@ -13,6 +13,9 @@
 (add-hook 'term-mode-hook (lambda()
                             (setq yas-dont-activate t)))
 
+
+(require 'arduino-mode)
+
 ;; Activate Helm
 (require 'helm-config)
 (helm-mode 1)
