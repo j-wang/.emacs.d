@@ -22,11 +22,13 @@
 (helm-autoresize-mode 1)
 
 ;; Python loads
+(require 'elpy)
 (elpy-enable)
 (add-hook 'python-mode-hook
 	  (lambda()
 	    (auto-fill-mode 1)
 	    (linum-mode 1)))
+
 
 ;; Enable paredit for lispy files
 (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)

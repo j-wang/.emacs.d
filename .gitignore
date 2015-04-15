@@ -49,3 +49,4 @@ venv
 # Stuff that shouldn't be tracked
 ede-projects.el
 elpa/*
+semanticdb/*

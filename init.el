@@ -16,6 +16,16 @@
 ;; Don't load GNU Emacs Screen
 (setq inhibit-startup-screen t)
 
+;; Make Emacs prettier
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+
+(setq-default indicate-buffer-boundaries 'right)
+(setq-default indicate-empty-lines t)
+(setq-default frame-title-format '("%b - %F"))
+
+(set-face-attribute 'default nil :font "Consolas")
+
 ;; Load Custom Files
 
 ;; Set mode-line
@@ -32,5 +42,20 @@
 (semantic-mode 1)
 (global-ede-mode 1)
 (global-semantic-idle-summary-mode 1)
+(global-semantic-idle-completions-mode 1)
+(setq ede-arduino-appdir "/Applications/Arduino.app/Contents/Java")
+
 
 ;;; init.el ends here
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ede-project-directories (quote ("/Users/James/dev/sb_firmware"))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
