@@ -6,6 +6,7 @@
 
 (require 'magit)
 (define-key global-map (kbd "C-c m") 'magit-status)
+(setq magit-last-seen-setup-instructions "1.4.0")  ;; don't show instructions
 
 (require 'yasnippet)
 (yas-global-mode 1)
@@ -28,6 +29,24 @@
 	  (lambda()
 	    (auto-fill-mode 1)
 	    (linum-mode 1)))
+
+;; Javascript stuff
+(add-hook 'js-mode-hook 'js2-minor-mode)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
+(setq js2-highlight-level 3)
+(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
+
+(add-hook 'js-mode-hook (lambda () (tern-mode t)))
+(eval-after-load 'tern
+   '(progn
+      (require 'tern-auto-complete)
+      (tern-ac-setup)))
+
+(defun delete-tern-process ()
+  (interactive)
+  (delete-process "Tern"))
+
+;; Future -- add creation of .tern-project automatically
 
 
 ;; Enable paredit for lispy files

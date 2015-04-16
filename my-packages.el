@@ -22,6 +22,10 @@
     async
     helm
     arduino-mode
+    js2-mode
+    ac-js2
+    tern
+    tern-auto-complete
     ) "list of packages to ensure are installed at launch")
 
 ;; Check if packages are installed
