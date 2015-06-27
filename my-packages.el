@@ -26,6 +26,8 @@
     ac-js2
     tern
     tern-auto-complete
+    centered-window-mode
+    sr-speedbar
     ) "list of packages to ensure are installed at launch")
 
 ;; Check if packages are installed

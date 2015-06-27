@@ -14,6 +14,15 @@
 (add-hook 'term-mode-hook (lambda()
                             (setq yas-dont-activate t)))
 
+(require 'evil)
+(evil-mode 1)
+
+(require 'centered-window-mode)
+
+(require 'sr-speedbar)
+(setq sr-speedbar-right-side nil)
+(setq sr-speedbar-default-width 20)
+(setq sr-speedbar-max-width 30)
 
 (require 'arduino-mode)
 
