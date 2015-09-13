@@ -28,6 +28,7 @@
     tern-auto-complete
     centered-window-mode
     sr-speedbar
+    latex-preview-pane
     ) "list of packages to ensure are installed at launch")
 
 ;; Check if packages are installed
