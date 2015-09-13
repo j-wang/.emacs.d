@@ -23,6 +23,8 @@
     helm
     arduino-mode
     js2-mode
+    coffee-mode
+    scss-mode
     ac-js2
     tern
     tern-auto-complete
