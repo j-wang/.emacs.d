@@ -17,6 +17,9 @@
 (require 'evil)
 (evil-mode 1)
 
+(require 'latex-preview-pane)
+(latex-preview-pane-enable)
+
 (require 'centered-window-mode)
 
 (require 'sr-speedbar)
