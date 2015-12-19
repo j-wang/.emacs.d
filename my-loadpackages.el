@@ -1,5 +1,6 @@
 ;;; my-loadpackages.el
 (load "~/.emacs.d/my-packages.el")
+(load "~/.emacs.d/go-autocomplete.el")
 
 ;; Whitespace-mode (built-in)
 (require 'whitespace)
@@ -100,3 +101,28 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
+
+;; Go Stuff
+(require 'go-mode)
+(setenv "GOPATH" "~/Documents/Dev/Go")
+
+(require 'go-autocomplete)
+(require 'auto-complete-config)
+(ac-config-default)
+
+;; gofmt on save
+(setq exec-path (cons "/usr/local/go/bin" exec-path))
+(add-to-list 'exec-path "~/Documents/Dev/Go/bin")
+(add-hook 'before-save-hook 'gofmt-before-save)
+
+;; definition jump with M-.
+(defun my-go-mode-hook ()
+  ; Call Gofmt before saving
+  (add-hook 'before-save-hook 'gofmt-before-save)
+  ; Customize compile command to run go build
+  (if (not (string-match "go" compile-command))
+      (set (make-local-variable 'compile-command)
+           "go generate && go build -v && go test -v && go vet"))
+  ; Godef jump key binding
+  (local-set-key (kbd "M-.") 'godef-jump))
+(add-hook 'go-mode-hook 'my-go-mode-hook)

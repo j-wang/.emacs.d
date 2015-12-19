@@ -32,6 +32,7 @@
     centered-window-mode
     sr-speedbar
     latex-preview-pane
+    go-mode
     ) "list of packages to ensure are installed at launch")
 
 ;; Check if packages are installed
