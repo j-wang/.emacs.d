@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: React-DataSource
+# key: rctds
+# group: react-native
+# --
+var $0 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});

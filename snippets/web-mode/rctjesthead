@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Jest-Test-Header
+# key: rctjesthead
+# group: jest-test
+# --
+import React from 'react';
+import ReactDOM from 'react-dom';
+import TestUtils from 'react-addons-test-utils';

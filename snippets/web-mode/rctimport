@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: React-Imports
+# key: rctimport
+# group: react-native
+# --
+var React = require('react-native');
+var {
+    AppRegistry,
+    StyleSheet,
+    Text,
+    View,
+    Component,
+    ListView,
+    TouchableHighlight,
+    NativeAppEventEmitter,
+} = React;

@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: React-Stylesheet
+# key: rctss
+# group: react-native
+# --
+var styles = StyleSheet.create({
+    $0: {
+    	$1
+    },
+});

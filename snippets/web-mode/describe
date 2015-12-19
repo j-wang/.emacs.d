@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: Describe-Test
+# key: describe
+# group: jest-test
+# --
+describe('$0', () => {
+  it('$1', () => {
+    $2
+
+    expect($3).toEqual($4);
+  });
+});

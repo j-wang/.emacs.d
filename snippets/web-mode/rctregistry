@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: React-AppRegistry
+# key: rctregistry
+# group: react-native
+# --
+AppRegistry.registerComponent('$0', () => $1);

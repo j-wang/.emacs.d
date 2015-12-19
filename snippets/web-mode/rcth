@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: RCT-TouchableHighlight
+# key: rcth
+# group: react-native
+# --
+<TouchableHighlight onPress={$0}
+                    style={$1}>
+      $2
+</TouchableHighlight>

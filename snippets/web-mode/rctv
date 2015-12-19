@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: RCT-View
+# key: rctv
+# group: react-native
+# --
+<View style={$0}>
+      $1
+</View>

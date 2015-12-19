@@ -26,6 +26,7 @@
     coffee-mode
     scss-mode
     ac-js2
+    web-mode
     tern
     tern-auto-complete
     centered-window-mode

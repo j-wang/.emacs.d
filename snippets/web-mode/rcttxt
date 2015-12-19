@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: React-Native-Text
+# key: rcttxt
+# group: react-native
+# --
+<Text style={$0}>
+      $1
+</Text>

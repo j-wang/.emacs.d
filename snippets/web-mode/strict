@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Use-Strict
+# key: strict
+# group: javascript
+# --
+'use strict';

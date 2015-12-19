@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: jshint
+# key: jsh
+# group: javascript
+# --
+/* jshint node: true */
+/* jshint esnext: true */
