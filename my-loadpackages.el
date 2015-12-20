@@ -104,7 +104,7 @@
 
 ;; Go Stuff
 (require 'go-mode)
-(setenv "GOPATH" (concat (getenv "$HOME") "/Documents/Dev/Go"))
+(setenv "GOPATH" (concat (getenv "HOME") "/Documents/Dev/Go"))
 
 (require 'go-autocomplete)
 (require 'auto-complete-config)
@@ -112,7 +112,7 @@
 
 ;; gofmt on save
 (setq exec-path (cons "/usr/local/go/bin" exec-path))
-(add-to-list 'exec-path (concat (getenv "$HOME") "/Documents/Dev/Go/bin"))
+(add-to-list 'exec-path (concat (getenv "HOME") "/Documents/Dev/Go/bin"))
 (add-hook 'before-save-hook 'gofmt-before-save)
 
 ;; definition jump with M-.
