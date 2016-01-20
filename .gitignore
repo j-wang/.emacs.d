@@ -51,3 +51,4 @@ ede-projects.el
 elpa/*
 semanticdb/*
 
+ac-comphist.dat
