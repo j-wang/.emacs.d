@@ -18,17 +18,16 @@
 (require 'evil)
 (evil-mode 1)
 
+(require 'evil-surround)
+(global-evil-surround-mode 1)
+
 (require 'latex-preview-pane)
 (latex-preview-pane-enable)
-
-(require 'centered-window-mode)
 
 (require 'sr-speedbar)
 (setq sr-speedbar-right-side nil)
 (setq sr-speedbar-default-width 20)
 (setq sr-speedbar-max-width 30)
-
-(require 'arduino-mode)
 
 ;; Activate Helm
 (require 'helm-config)
@@ -54,39 +53,35 @@
         ad-do-it)
     ad-do-it))
 
+;; adjust indents for web-mode to 2 spaces
+(defun my-web-mode-hook ()
+  "Hooks for Web mode. Adjust indents"
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2))
+(add-hook 'web-mode-hook  'my-web-mode-hook)
+
+;; for better jsx syntax-highlighting in web-mode
+;; - courtesy of Patrick @halbtuerke
+(defadvice web-mode-highlight-part (around tweak-jsx activate)
+  (if (equal web-mode-content-type "jsx")
+    (let ((web-mode-enable-part-face nil))
+      ad-do-it)
+    ad-do-it))
+
 (require 'flycheck)
-(flycheck-define-checker jsxhint-checker
-  "A JSX syntax and style checker based on JSXHint."
+;; Add ESlint, remove jshint
+(setq-default flycheck-disabled-checkers
+	      (append flycheck-disabled-checkers
+		      '(javascript-jshint)))
+(flycheck-add-mode 'javascript-eslint 'web-mode)
 
-  :command ("jsxhint" source)
-  :error-patterns
-  ((error line-start (1+ nonl) ": line " line ", col " column ", " (message) line-end))
-  :modes (web-mode))
-(add-hook 'web-mode-hook
-          (lambda ()
-            (when (equal web-mode-content-type "jsx")
-              ;; enable flycheck
-              (flycheck-select-checker 'jsxhint-checker)
-              (flycheck-mode))))
+(setq-default flycheck-temp-prefix ".flycheck")
 
-;; Javascript stuff
-(add-hook 'js-mode-hook 'js2-minor-mode)
-(add-hook 'js2-mode-hook 'ac-js2-mode)
-(setq js2-highlight-level 3)
-(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
-
-(add-hook 'js-mode-hook (lambda () (tern-mode t)))
-(eval-after-load 'tern
-   '(progn
-      (require 'tern-auto-complete)
-      (tern-ac-setup)))
-
-(defun delete-tern-process ()
-  (interactive)
-  (delete-process "Tern"))
-
-;; Future -- add creation of .tern-project automatically
-
+;; disable json-jsonlist
+(setq-default flycheck-disabled-checkers
+	      (append flycheck-disabled-checkers
+		      '(json-jsonlist)))
 
 ;; Enable paredit for lispy files
 (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
@@ -100,7 +95,6 @@
 ;; Ensure that emacs sees the same $PATH as shell
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
-
 
 ;; Go Stuff
 (require 'go-mode)

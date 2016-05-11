@@ -26,6 +26,9 @@
 
 (set-face-attribute 'default nil :font "Consolas")
 
+;; Set default indent width to 4
+(setq tab-width 4)
+
 ;; Add margins
 (defun my-set-text-properties ()
   "Set margins in current buffer, and prettiness."

@@ -17,19 +17,17 @@
     paredit
     exec-path-from-shell
     evil
+    evil-surround
     flycheck
     markdown-mode
     async
     helm
-    arduino-mode
     js2-mode
+    json-mode
     coffee-mode
     scss-mode
     ac-js2
     web-mode
-    tern
-    tern-auto-complete
-    centered-window-mode
     sr-speedbar
     latex-preview-pane
     go-mode
