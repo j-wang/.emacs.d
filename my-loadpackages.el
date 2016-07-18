@@ -24,15 +24,25 @@
 (require 'latex-preview-pane)
 (latex-preview-pane-enable)
 
-(require 'sr-speedbar)
-(setq sr-speedbar-right-side nil)
-(setq sr-speedbar-default-width 20)
-(setq sr-speedbar-max-width 30)
+(require 'project-explorer)
 
 ;; Activate Helm
 (require 'helm-config)
+
+(projectile-global-mode)
+(require 'helm-projectile)
+(helm-projectile-on)
+
+(setq helm-M-x-fuzzy-match t)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring) 
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+
 (helm-mode 1)
 (helm-autoresize-mode 1)
+
+;; Dumb Jump
+(dumb-jump-mode)
 
 ;; Python loads
 (require 'elpy)

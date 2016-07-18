@@ -16,6 +16,9 @@
 ;; Don't load GNU Emacs Screen
 (setq inhibit-startup-screen t)
 
+;; Set default tab-width
+(setq-default tab-width 4)
+
 ;; Make Emacs prettier
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
@@ -25,9 +28,6 @@
 (setq-default frame-title-format '("%b - %F"))
 
 (set-face-attribute 'default nil :font "Consolas")
-
-;; Set default indent width to 4
-(setq tab-width 4)
 
 ;; Add margins
 (defun my-set-text-properties ()

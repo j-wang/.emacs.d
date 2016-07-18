@@ -22,13 +22,17 @@
     markdown-mode
     async
     helm
+	helm-ag
+	helm-projectile
+	dumb-jump
     js2-mode
     json-mode
     coffee-mode
     scss-mode
     ac-js2
     web-mode
-    sr-speedbar
+	projectile
+    project-explorer
     latex-preview-pane
     go-mode
     ) "list of packages to ensure are installed at launch")
