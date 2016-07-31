@@ -13,6 +13,7 @@
     yasnippet
     multiple-cursors
     solarized-theme
+    zenburn-theme
     elpy
     paredit
     exec-path-from-shell

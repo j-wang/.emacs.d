@@ -46,7 +46,7 @@
 (column-number-mode)
 
 ;; Load theme
-(load-theme 'solarized-dark t)
+(load-theme 'zenburn t)
 
 ;; Flycheck everywhere
 (add-hook 'after-init-hook #'global-flycheck-mode)

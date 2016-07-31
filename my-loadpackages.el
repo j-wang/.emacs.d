@@ -62,6 +62,7 @@
       (let ((web-mode-enable-part-face nil))
         ad-do-it)
     ad-do-it))
+(setq-default indent-tabs-mode nil)
 
 ;; adjust indents for web-mode to 2 spaces
 (defun my-web-mode-hook ()
