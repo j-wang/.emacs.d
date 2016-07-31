@@ -60,6 +60,12 @@
 	    (auto-fill-mode 1)
 	    (linum-mode 1)))
 
+;; Elm-Mode
+(require 'elm-mode)
+(setq elm-sort-imports-on-save t)
+(setq elm-format-on-save t)
+(add-hook 'elm-mode-hook #'elm-oracle-setup-ac)
+
 ;; Web-Mode for JSX
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js$" . web-mode))
