@@ -36,6 +36,7 @@
     project-explorer
     latex-preview-pane
     go-mode
+    eval-in-repl
     ) "list of packages to ensure are installed at launch")
 
 ;; Check if packages are installed
