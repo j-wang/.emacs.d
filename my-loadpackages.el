@@ -49,6 +49,11 @@
 (helm-mode 1)
 (helm-autoresize-mode 1)
 
+;; Smart-Mode-Line Setup
+(setq sml/no-confirm-load-theme t)
+(sml/setup)
+(setq sml/theme 'dark)
+
 ;; Dumb Jump
 (dumb-jump-mode)
 

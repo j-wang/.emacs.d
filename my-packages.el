@@ -38,6 +38,8 @@
     go-mode
     elm-mode
     eval-in-repl
+    smart-mode-line
+    smart-mode-line-powerline-theme
     ) "list of packages to ensure are installed at launch")
 
 ;; Check if packages are installed
