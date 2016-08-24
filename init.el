@@ -36,8 +36,7 @@
 ;; Add margins
 (defun my-set-text-properties ()
   "Set margins in current buffer, and prettiness."
-  (centered-window-mode t)
-  (visual-line-mode 1)
+  (Visual-line-mode 1)
   (line-height 1.2))
 
 (add-hook 'text-mode-hook 'my-set-text-properties)
