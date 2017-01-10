@@ -38,6 +38,7 @@
     go-mode
     elm-mode
     eval-in-repl
+    terraform-mode
     smart-mode-line
     smart-mode-line-powerline-theme
     ) "list of packages to ensure are installed at launch")
